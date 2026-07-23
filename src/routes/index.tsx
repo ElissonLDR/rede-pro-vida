@@ -304,12 +304,13 @@ function HowItWorks() {
           <div className="hidden md:block absolute top-8 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-[var(--petrol)]/25 to-transparent" />
           {steps.map((s, i) => (
             <div key={s.t} className="relative text-center">
-              <div className="relative mx-auto h-16 w-16 rounded-2xl bg-[var(--petrol)] text-white grid place-items-center shadow-lg shadow-[var(--petrol)]/25">
+              <div className="relative mx-auto h-16 w-16 rounded-2xl bg-[var(--coral-soft)] text-[var(--petrol)] grid place-items-center">
                 <s.i className="h-7 w-7" />
-                <span className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[var(--coral)] text-white text-sm font-bold grid place-items-center ring-4 ring-white">
+                <span className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[var(--petrol)] text-white text-sm font-bold grid place-items-center ring-4 ring-white">
                   {i + 1}
                 </span>
               </div>
+
               <h3 className="mt-5 text-lg font-bold text-[var(--petrol)]">{s.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
             </div>

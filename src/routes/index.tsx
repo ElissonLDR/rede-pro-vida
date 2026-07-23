@@ -83,7 +83,7 @@ function Header() {
     { href: "#contato", label: "Contato" },
   ];
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         <a href="#top" className="flex items-center gap-2">
           <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-8 md:h-10 w-auto" />
@@ -132,73 +132,72 @@ function Header() {
 /* ---------------- Hero ---------------- */
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-[var(--petrol)] text-white">
-      {/* backdrop */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_55%),radial-gradient(circle_at_80%_0%,rgba(255,122,89,0.25),transparent_50%)]" />
-      <div className="absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-[var(--coral)]/20 blur-3xl" />
-      <div className="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
+    <section id="top" className="relative overflow-hidden bg-white">
+      {/* subtle blue accents */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_15%_10%,rgba(27,117,188,0.08),transparent_55%),radial-gradient(circle_at_85%_0%,rgba(74,155,216,0.10),transparent_55%)]" />
+      <div className="absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-[var(--coral-soft)] blur-3xl opacity-70" />
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-6 pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         {/* copy */}
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-3.5 py-1.5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--coral-soft)] bg-[var(--coral-soft)]/60 px-3.5 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--whatsapp)] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--whatsapp)]" />
             </span>
-            <span className="text-xs md:text-sm font-medium text-white/90">
+            <span className="text-xs md:text-sm font-medium text-[var(--petrol)]">
               Agendamento aberto hoje — resposta em minutos
             </span>
           </div>
 
-          <h1 className="mt-6 text-[2.5rem] leading-[1.02] md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight">
-            Sua saúde <span className="text-[var(--coral)]">não pode</span> esperar
+          <h1 className="mt-6 text-[2.5rem] leading-[1.05] md:text-6xl lg:text-[4.25rem] font-semibold tracking-tight text-foreground">
+            Sua saúde <span className="text-[var(--petrol)] font-bold">não pode</span> esperar
             <br className="hidden md:block" /> por uma vaga no SUS.
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
-            Consultas a partir de <strong className="text-white">R$ 80</strong>, exames e cirurgias
-            com preço fechado — <strong className="text-white">+20 especialidades</strong> no mesmo lugar,
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            Consultas a partir de <strong className="text-foreground">R$ 80</strong>, exames e cirurgias
+            com preço fechado — <strong className="text-foreground">+20 especialidades</strong> no mesmo lugar,
             em Belém, com agendamento direto no WhatsApp.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href={waLink()} target="_blank" rel="noopener noreferrer" className="sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 text-base h-14 px-8 shadow-xl shadow-[var(--whatsapp)]/40 font-semibold">
+              <Button size="lg" className="w-full sm:w-auto bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 text-base h-14 px-8 shadow-lg shadow-[var(--whatsapp)]/25 font-semibold rounded-xl">
                 <MessageCircle className="h-5 w-5" /> Agendar agora no WhatsApp
               </Button>
             </a>
             <a href="#combos" className="sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-7 border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white text-base backdrop-blur">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-7 border-[var(--petrol)] bg-white text-[var(--petrol)] hover:bg-[var(--coral-soft)] hover:text-[var(--petrol)] text-base rounded-xl">
                 Ver combos e preços <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             </a>
           </div>
 
           {/* trust row */}
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/70">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[0,1,2,3,4].map((i) => (
-                  <Star key={i} className="h-4 w-4 text-[var(--coral)] fill-[var(--coral)]" />
+                  <Star key={i} className="h-4 w-4 text-[var(--petrol)] fill-[var(--petrol)]" />
                 ))}
               </div>
-              <span><strong className="text-white">4.9</strong> no Google</span>
+              <span><strong className="text-foreground">4.9</strong> no Google</span>
             </div>
             <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[var(--whatsapp)]" /> Preço fechado, sem surpresa</div>
             <div className="flex items-center gap-2"><Clock className="h-4 w-4 text-[var(--whatsapp)]" /> Vagas para esta semana</div>
           </div>
 
           {/* stats */}
-          <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl border-t border-white/10 pt-8">
+          <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl border-t border-border pt-8">
             {[
               { n: "+10", l: "Anos em Belém" },
               { n: "+20", l: "Especialidades" },
               { n: "+50k", l: "Pacientes atendidos" },
             ].map((s) => (
               <div key={s.l}>
-                <div className="text-3xl md:text-4xl font-extrabold text-white">{s.n}</div>
-                <div className="text-xs md:text-sm text-white/60 mt-1">{s.l}</div>
+                <div className="text-3xl md:text-4xl font-bold text-[var(--petrol)]">{s.n}</div>
+                <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
               </div>
             ))}
           </div>
@@ -206,43 +205,43 @@ function Hero() {
 
         {/* image column */}
         <div className="lg:col-span-5 relative">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--coral)]/30 to-transparent blur-2xl" />
-          <div className="relative rounded-[2rem] overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40">
+          <div className="absolute -inset-4 rounded-[2rem] bg-[var(--coral-soft)] blur-2xl opacity-60" />
+          <div className="relative rounded-[2rem] overflow-hidden ring-1 ring-border shadow-xl shadow-[var(--petrol)]/10">
             <img src={heroDoctor} alt="Médica em atendimento humanizado na Rede Pró Vida Belém" width={1280} height={1280} className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--petrol)]/60 via-transparent to-transparent" />
           </div>
 
           {/* floating price card */}
-          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-white text-[var(--petrol)] rounded-2xl shadow-2xl p-4 pr-5 flex items-center gap-3 ring-1 ring-black/5 max-w-[16rem]">
+          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-white text-foreground rounded-2xl shadow-xl p-4 pr-5 flex items-center gap-3 ring-1 ring-border max-w-[16rem]">
             <div className="h-11 w-11 rounded-xl bg-[var(--whatsapp)]/10 grid place-items-center shrink-0">
               <Wallet className="h-5 w-5 text-[var(--whatsapp)]" />
             </div>
             <div>
               <div className="text-[0.7rem] uppercase tracking-wide text-muted-foreground font-semibold">Consulta a partir de</div>
-              <div className="text-xl font-extrabold leading-tight">R$ 80,00</div>
+              <div className="text-xl font-bold leading-tight text-[var(--petrol)]">R$ 80,00</div>
             </div>
           </div>
 
           {/* floating rating */}
-          <div className="hidden md:flex absolute -top-4 -right-4 bg-white text-[var(--petrol)] rounded-2xl shadow-xl px-4 py-3 items-center gap-2 ring-1 ring-black/5">
-            <Star className="h-4 w-4 text-[var(--coral)] fill-[var(--coral)]" />
-            <span className="text-sm font-semibold">4.9 no Google</span>
+          <div className="hidden md:flex absolute -top-4 -right-4 bg-white text-foreground rounded-2xl shadow-lg px-4 py-3 items-center gap-2 ring-1 ring-border">
+            <Star className="h-4 w-4 text-[var(--petrol)] fill-[var(--petrol)]" />
+            <span className="text-sm font-semibold text-[var(--petrol)]">4.9 no Google</span>
           </div>
         </div>
       </div>
 
-      {/* bottom marquee-ish trust bar */}
-      <div className="relative border-t border-white/10 bg-black/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-4 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-2 text-xs md:text-sm text-white/70">
-          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--coral)]" /> 3 unidades em Belém</div>
-          <div className="flex items-center gap-2"><Stethoscope className="h-4 w-4 text-[var(--coral)]" /> Clínico, Cardio, Pediatria, Ginecologia…</div>
-          <div className="flex items-center gap-2"><FlaskConical className="h-4 w-4 text-[var(--coral)]" /> Exames laboratoriais e de imagem</div>
-          <div className="flex items-center gap-2"><Scissors className="h-4 w-4 text-[var(--coral)]" /> Cirurgias com pacote fechado</div>
+      {/* bottom trust bar */}
+      <div className="relative border-t border-border bg-[var(--soft)]">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-4 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-2 text-xs md:text-sm text-muted-foreground">
+          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--petrol)]" /> 3 unidades em Belém</div>
+          <div className="flex items-center gap-2"><Stethoscope className="h-4 w-4 text-[var(--petrol)]" /> Clínico, Cardio, Pediatria, Ginecologia…</div>
+          <div className="flex items-center gap-2"><FlaskConical className="h-4 w-4 text-[var(--petrol)]" /> Exames laboratoriais e de imagem</div>
+          <div className="flex items-center gap-2"><Scissors className="h-4 w-4 text-[var(--petrol)]" /> Cirurgias com pacote fechado</div>
         </div>
       </div>
     </section>
   );
 }
+
 
 /* ---------------- Pains ---------------- */
 function Pains() {
@@ -253,27 +252,27 @@ function Pains() {
     "Sem saber o valor final até chegar no balcão da clínica?",
   ];
   return (
-    <section className="bg-[var(--petrol)] text-white py-20 md:py-28">
+    <section className="bg-[var(--soft)] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <Badge className="bg-white/10 hover:bg-white/10 text-white border-0 mb-5">Talvez você se identifique</Badge>
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <Badge className="bg-[var(--coral-soft)] hover:bg-[var(--coral-soft)] text-[var(--petrol)] border-0 mb-5">Talvez você se identifique</Badge>
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight text-foreground">
             Sua saúde (e a da sua família) está passando por isso?
           </h2>
         </div>
         <div className="mt-14 grid sm:grid-cols-2 gap-5">
           {items.map((it) => (
-            <div key={it} className="group flex gap-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10 p-6">
-              <div className="shrink-0 h-11 w-11 rounded-xl bg-[var(--coral)]/20 grid place-items-center">
-                <AlertCircle className="h-5 w-5 text-[var(--coral)]" />
+            <div key={it} className="group flex gap-4 rounded-2xl bg-white hover:shadow-md transition-shadow border border-border p-6 shadow-sm">
+              <div className="shrink-0 h-11 w-11 rounded-xl bg-[var(--coral-soft)] grid place-items-center">
+                <AlertCircle className="h-5 w-5 text-[var(--petrol)]" />
               </div>
-              <p className="text-lg text-white/90 leading-snug pt-1">{it}</p>
+              <p className="text-lg text-foreground leading-snug pt-1">{it}</p>
             </div>
           ))}
         </div>
         <div className="mt-12 text-center">
           <a href={waLink()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7">
+            <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7 rounded-xl">
               <MessageCircle className="h-5 w-5" /> Resolver agora no WhatsApp
             </Button>
           </a>
@@ -282,6 +281,7 @@ function Pains() {
     </section>
   );
 }
+
 
 /* ---------------- How it works ---------------- */
 function HowItWorks() {
@@ -304,12 +304,13 @@ function HowItWorks() {
           <div className="hidden md:block absolute top-8 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-[var(--petrol)]/25 to-transparent" />
           {steps.map((s, i) => (
             <div key={s.t} className="relative text-center">
-              <div className="relative mx-auto h-16 w-16 rounded-2xl bg-[var(--petrol)] text-white grid place-items-center shadow-lg shadow-[var(--petrol)]/25">
+              <div className="relative mx-auto h-16 w-16 rounded-2xl bg-[var(--coral-soft)] text-[var(--petrol)] grid place-items-center">
                 <s.i className="h-7 w-7" />
-                <span className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[var(--coral)] text-white text-sm font-bold grid place-items-center ring-4 ring-white">
+                <span className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[var(--petrol)] text-white text-sm font-bold grid place-items-center ring-4 ring-white">
                   {i + 1}
                 </span>
               </div>
+
               <h3 className="mt-5 text-lg font-bold text-[var(--petrol)]">{s.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
             </div>
@@ -439,30 +440,30 @@ function Combos() {
           {combos.map((c) => (
             <Card
               key={c.t}
-              className={`relative rounded-2xl border-0 transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative rounded-2xl transition-all duration-300 hover:-translate-y-1 bg-white shadow-sm hover:shadow-xl ${
                 c.popular
-                  ? "bg-[var(--petrol)] text-white shadow-2xl shadow-[var(--petrol)]/30 ring-2 ring-[var(--coral)]"
-                  : "bg-white shadow-sm hover:shadow-xl"
+                  ? "border-2 border-[var(--petrol)] ring-1 ring-[var(--coral-soft)]"
+                  : "border border-border"
               }`}
             >
               {c.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--coral)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--petrol)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                   Mais Completo
                 </div>
               )}
               <CardContent className="p-6 flex flex-col h-full">
-                <h3 className={`text-lg font-bold ${c.popular ? "text-white" : "text-[var(--petrol)]"}`}>{c.t}</h3>
+                <h3 className="text-lg font-bold text-[var(--petrol)]">{c.t}</h3>
                 <div className="mt-3">
-                  <div className={`text-xs uppercase tracking-wide ${c.popular ? "text-white/70" : "text-muted-foreground"}`}>a partir de</div>
-                  <div className={`mt-1 text-3xl font-extrabold ${c.popular ? "text-white" : "text-[var(--petrol)]"}`}>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">a partir de</div>
+                  <div className="mt-1 text-3xl font-bold text-foreground">
                     R$ {c.price}
                   </div>
                 </div>
                 <ul className="mt-5 space-y-2.5 flex-1">
                   {c.items.map((i) => (
                     <li key={i} className="flex gap-2.5 text-sm">
-                      <CheckCircle2 className={`h-5 w-5 shrink-0 ${c.popular ? "text-[var(--coral)]" : "text-[var(--whatsapp)]"}`} />
-                      <span className={c.popular ? "text-white/90" : "text-foreground/80"}>{i}</span>
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--whatsapp)]" />
+                      <span className="text-foreground/80">{i}</span>
                     </li>
                   ))}
                 </ul>
@@ -472,18 +473,13 @@ function Combos() {
                   rel="noopener noreferrer"
                   className="mt-6"
                 >
-                  <Button
-                    className={`w-full gap-2 h-12 ${
-                      c.popular
-                        ? "bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white"
-                        : "bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white"
-                    }`}
-                  >
+                  <Button className="w-full gap-2 h-12 rounded-xl bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white">
                     <MessageCircle className="h-4 w-4" /> Quero esse combo
                   </Button>
                 </a>
               </CardContent>
             </Card>
+
           ))}
         </div>
       </div>
@@ -509,7 +505,7 @@ function Testimonials() {
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {tests.map((t) => (
-            <Card key={t.n} className="border-0 bg-[var(--soft)] rounded-2xl">
+            <Card key={t.n} className="border border-border bg-white rounded-2xl shadow-sm">
               <CardContent className="p-7">
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -544,15 +540,16 @@ function Numbers() {
     { n: "4.9★", l: "Nota no Google" },
   ];
   return (
-    <section className="bg-gradient-to-br from-[var(--petrol)] via-[var(--petrol-dark)] to-[var(--petrol)] text-white py-16 md:py-20">
+    <section className="bg-white border-y border-border py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
-            <div className="text-4xl md:text-6xl font-extrabold text-white">{s.n}</div>
-            <div className="mt-2 text-sm md:text-base text-white/70">{s.l}</div>
+            <div className="text-4xl md:text-6xl font-bold text-[var(--petrol)]">{s.n}</div>
+            <div className="mt-2 text-sm md:text-base text-muted-foreground">{s.l}</div>
           </div>
         ))}
       </div>
+
     </section>
   );
 }
@@ -601,33 +598,34 @@ function FinalCTA() {
     window.open(waLink(msg), "_blank");
   }
   return (
-    <section id="contato" className="relative bg-[var(--petrol)] text-white py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[var(--coral)]/30 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[var(--petrol-light)]/40 blur-3xl" />
+    <section id="contato" className="relative bg-[var(--soft)] py-20 md:py-28 overflow-hidden">
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[var(--coral-soft)] blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[var(--coral-soft)] blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight text-foreground">
             Pronto para cuidar da sua saúde hoje?
           </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-lg">
+          <p className="mt-4 text-lg text-muted-foreground max-w-lg">
             Fale agora com a Rede Pró Vida Belém e agende seu atendimento no mesmo dia.
           </p>
           <div className="mt-8 space-y-4">
-            <div className="flex items-center gap-3 text-white/90"><MapPin className="h-5 w-5 text-[var(--coral)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
-            <div className="flex items-center gap-3 text-white/90"><Clock className="h-5 w-5 text-[var(--coral)]" /> Atendimento de segunda a sábado</div>
-            <div className="flex items-center gap-3 text-white/90"><ShieldCheck className="h-5 w-5 text-[var(--coral)]" /> Equipe qualificada e ambiente seguro</div>
+            <div className="flex items-center gap-3 text-foreground"><MapPin className="h-5 w-5 text-[var(--petrol)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
+            <div className="flex items-center gap-3 text-foreground"><Clock className="h-5 w-5 text-[var(--petrol)]" /> Atendimento de segunda a sábado</div>
+            <div className="flex items-center gap-3 text-foreground"><ShieldCheck className="h-5 w-5 text-[var(--petrol)]" /> Equipe qualificada e ambiente seguro</div>
           </div>
           <div className="mt-8">
             <a href={waLink()} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7">
+              <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7 rounded-xl">
                 <MessageCircle className="h-5 w-5" /> Prefiro falar direto no WhatsApp
               </Button>
             </a>
           </div>
         </div>
-        <Card className="bg-white text-foreground rounded-2xl shadow-2xl border-0">
+        <Card className="bg-white text-foreground rounded-2xl shadow-xl border border-border">
+
           <CardContent className="p-7 md:p-8">
             <h3 className="text-2xl font-bold text-[var(--petrol)]">Agende em 1 minuto</h3>
             <p className="mt-1 text-sm text-muted-foreground">Preencha e nossa equipe fala com você no WhatsApp.</p>
@@ -666,51 +664,52 @@ function FinalCTA() {
 /* ---------------- Footer ---------------- */
 function Footer() {
   return (
-    <footer className="bg-[var(--petrol-dark)] text-white/80">
+    <footer className="bg-[var(--coral-soft)]/40 text-foreground border-t border-border">
       <div className="mx-auto max-w-7xl px-4 md:px-6 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-10 w-auto brightness-0 invert" />
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
+          <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-10 w-auto" />
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
             A Rede Pró Vida Belém nasceu para aproximar consultas, exames e cirurgias
             de quem mais precisa, com preço justo e atendimento de verdade. Estamos na
             Rua Veiga Cabral, no coração da Cidade Velha, prontos para cuidar de você
             e da sua família.
           </p>
-          <div className="mt-6 space-y-2 text-sm">
-            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--coral)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
-            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--coral)]" /> (91) 9302-2218</div>
-            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--coral)]" /> contato@redeprovidabelem.com.br</div>
+          <div className="mt-6 space-y-2 text-sm text-foreground">
+            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--petrol)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
+            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--petrol)]" /> (91) 9302-2218</div>
+            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--petrol)]" /> contato@redeprovidabelem.com.br</div>
           </div>
         </div>
         <div>
-          <h4 className="text-white font-bold mb-4">Serviços</h4>
-          <ul className="space-y-2 text-sm">
+          <h4 className="text-[var(--petrol)] font-bold mb-4">Serviços</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
             {["Consultas","Exames","Cirurgias","Odontologia","Medicina do Trabalho","Combos"].map((s) => (
-              <li key={s}><a href="#servicos" className="hover:text-white transition-colors">{s}</a></li>
+              <li key={s}><a href="#servicos" className="hover:text-[var(--petrol)] transition-colors">{s}</a></li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="text-white font-bold mb-4">Institucional</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#faq" className="hover:text-white">Perguntas frequentes</a></li>
-            <li><a href="#depoimentos" className="hover:text-white">Depoimentos</a></li>
-            <li><a href="#" className="hover:text-white">Termos de Uso</a></li>
-            <li><a href="#" className="hover:text-white">Política de Privacidade</a></li>
+          <h4 className="text-[var(--petrol)] font-bold mb-4">Institucional</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li><a href="#faq" className="hover:text-[var(--petrol)]">Perguntas frequentes</a></li>
+            <li><a href="#depoimentos" className="hover:text-[var(--petrol)]">Depoimentos</a></li>
+            <li><a href="#" className="hover:text-[var(--petrol)]">Termos de Uso</a></li>
+            <li><a href="#" className="hover:text-[var(--petrol)]">Política de Privacidade</a></li>
           </ul>
           <a href={waLink()} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block">
-            <Button className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2">
+            <Button className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 rounded-xl">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </Button>
           </a>
         </div>
       </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Rede Pró Vida Belém. Todos os direitos reservados.</div>
           <div>CNPJ 00.000.000/0001-00 · Belém - PA</div>
         </div>
       </div>
+
       {/* GTM / Meta Pixel placeholder */}
       {/* <script>...</script> */}
     </footer>

@@ -72,34 +72,36 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.03 220);
-  --petrol: #0A3B4A;
-  --petrol-dark: #072B37;
-  --petrol-light: #12556B;
-  --coral: #FF7A59;
-  --coral-soft: #FFD9CE;
+  --radius: 0.875rem;
+  --background: #FFFFFF;
+  --foreground: #2D3748;
+  /* Brand blues (Rede Pró Vida) — repurposed from legacy petrol tokens */
+  --petrol: #1B75BC;
+  --petrol-dark: #145A94;
+  --petrol-light: #4A9BD8;
+  /* Accent — repurposed from legacy coral tokens to soft brand blue */
+  --coral: #1B75BC;
+  --coral-soft: #E7F1FB;
   --whatsapp: #25D366;
-  --whatsapp-hover: #128C7E;
-  --soft: #F4F7F6;
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 220);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 220);
-  --primary: #0A3B4A;
-  --primary-foreground: #ffffff;
-  --secondary: #F4F7F6;
-  --secondary-foreground: #0A3B4A;
-  --muted: #F4F7F6;
-  --muted-foreground: oklch(0.48 0.02 220);
-  --accent: #FF7A59;
-  --accent-foreground: #ffffff;
+  --whatsapp-hover: #1FB959;
+  --soft: #F7F9FB;
+  --card: #FFFFFF;
+  --card-foreground: #2D3748;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D3748;
+  --primary: #1B75BC;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F9FB;
+  --secondary-foreground: #1B75BC;
+  --muted: #F7F9FB;
+  --muted-foreground: #718096;
+  --accent: #E7F1FB;
+  --accent-foreground: #1B75BC;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.92 0.01 220);
-  --input: oklch(0.92 0.01 220);
-  --ring: #0A3B4A;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #1B75BC;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -114,6 +116,7 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
+
 
 .dark {
   --background: oklch(0.129 0.042 264.695);

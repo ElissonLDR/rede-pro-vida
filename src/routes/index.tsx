@@ -505,7 +505,7 @@ function Testimonials() {
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {tests.map((t) => (
-            <Card key={t.n} className="border-0 bg-[var(--soft)] rounded-2xl">
+            <Card key={t.n} className="border border-border bg-white rounded-2xl shadow-sm">
               <CardContent className="p-7">
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (

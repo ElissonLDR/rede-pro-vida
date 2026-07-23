@@ -597,33 +597,34 @@ function FinalCTA() {
     window.open(waLink(msg), "_blank");
   }
   return (
-    <section id="contato" className="relative bg-[var(--petrol)] text-white py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[var(--coral)]/30 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[var(--petrol-light)]/40 blur-3xl" />
+    <section id="contato" className="relative bg-[var(--soft)] py-20 md:py-28 overflow-hidden">
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[var(--coral-soft)] blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[var(--coral-soft)] blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight text-foreground">
             Pronto para cuidar da sua saúde hoje?
           </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-lg">
+          <p className="mt-4 text-lg text-muted-foreground max-w-lg">
             Fale agora com a Rede Pró Vida Belém e agende seu atendimento no mesmo dia.
           </p>
           <div className="mt-8 space-y-4">
-            <div className="flex items-center gap-3 text-white/90"><MapPin className="h-5 w-5 text-[var(--coral)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
-            <div className="flex items-center gap-3 text-white/90"><Clock className="h-5 w-5 text-[var(--coral)]" /> Atendimento de segunda a sábado</div>
-            <div className="flex items-center gap-3 text-white/90"><ShieldCheck className="h-5 w-5 text-[var(--coral)]" /> Equipe qualificada e ambiente seguro</div>
+            <div className="flex items-center gap-3 text-foreground"><MapPin className="h-5 w-5 text-[var(--petrol)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
+            <div className="flex items-center gap-3 text-foreground"><Clock className="h-5 w-5 text-[var(--petrol)]" /> Atendimento de segunda a sábado</div>
+            <div className="flex items-center gap-3 text-foreground"><ShieldCheck className="h-5 w-5 text-[var(--petrol)]" /> Equipe qualificada e ambiente seguro</div>
           </div>
           <div className="mt-8">
             <a href={waLink()} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7">
+              <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7 rounded-xl">
                 <MessageCircle className="h-5 w-5" /> Prefiro falar direto no WhatsApp
               </Button>
             </a>
           </div>
         </div>
-        <Card className="bg-white text-foreground rounded-2xl shadow-2xl border-0">
+        <Card className="bg-white text-foreground rounded-2xl shadow-xl border border-border">
+
           <CardContent className="p-7 md:p-8">
             <h3 className="text-2xl font-bold text-[var(--petrol)]">Agende em 1 minuto</h3>
             <p className="mt-1 text-sm text-muted-foreground">Preencha e nossa equipe fala com você no WhatsApp.</p>

@@ -663,51 +663,52 @@ function FinalCTA() {
 /* ---------------- Footer ---------------- */
 function Footer() {
   return (
-    <footer className="bg-[var(--petrol-dark)] text-white/80">
+    <footer className="bg-[var(--coral-soft)]/40 text-foreground border-t border-border">
       <div className="mx-auto max-w-7xl px-4 md:px-6 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-10 w-auto brightness-0 invert" />
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
+          <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-10 w-auto" />
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
             A Rede Pró Vida Belém nasceu para aproximar consultas, exames e cirurgias
             de quem mais precisa, com preço justo e atendimento de verdade. Estamos na
             Rua Veiga Cabral, no coração da Cidade Velha, prontos para cuidar de você
             e da sua família.
           </p>
-          <div className="mt-6 space-y-2 text-sm">
-            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--coral)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
-            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--coral)]" /> (91) 9302-2218</div>
-            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--coral)]" /> contato@redeprovidabelem.com.br</div>
+          <div className="mt-6 space-y-2 text-sm text-foreground">
+            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--petrol)]" /> Rua Veiga Cabral — Cidade Velha, Belém - PA</div>
+            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--petrol)]" /> (91) 9302-2218</div>
+            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--petrol)]" /> contato@redeprovidabelem.com.br</div>
           </div>
         </div>
         <div>
-          <h4 className="text-white font-bold mb-4">Serviços</h4>
-          <ul className="space-y-2 text-sm">
+          <h4 className="text-[var(--petrol)] font-bold mb-4">Serviços</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
             {["Consultas","Exames","Cirurgias","Odontologia","Medicina do Trabalho","Combos"].map((s) => (
-              <li key={s}><a href="#servicos" className="hover:text-white transition-colors">{s}</a></li>
+              <li key={s}><a href="#servicos" className="hover:text-[var(--petrol)] transition-colors">{s}</a></li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="text-white font-bold mb-4">Institucional</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#faq" className="hover:text-white">Perguntas frequentes</a></li>
-            <li><a href="#depoimentos" className="hover:text-white">Depoimentos</a></li>
-            <li><a href="#" className="hover:text-white">Termos de Uso</a></li>
-            <li><a href="#" className="hover:text-white">Política de Privacidade</a></li>
+          <h4 className="text-[var(--petrol)] font-bold mb-4">Institucional</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li><a href="#faq" className="hover:text-[var(--petrol)]">Perguntas frequentes</a></li>
+            <li><a href="#depoimentos" className="hover:text-[var(--petrol)]">Depoimentos</a></li>
+            <li><a href="#" className="hover:text-[var(--petrol)]">Termos de Uso</a></li>
+            <li><a href="#" className="hover:text-[var(--petrol)]">Política de Privacidade</a></li>
           </ul>
           <a href={waLink()} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block">
-            <Button className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2">
+            <Button className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 rounded-xl">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </Button>
           </a>
         </div>
       </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Rede Pró Vida Belém. Todos os direitos reservados.</div>
           <div>CNPJ 00.000.000/0001-00 · Belém - PA</div>
         </div>
       </div>
+
       {/* GTM / Meta Pixel placeholder */}
       {/* <script>...</script> */}
     </footer>

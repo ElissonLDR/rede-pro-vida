@@ -83,7 +83,7 @@ function Header() {
     { href: "#contato", label: "Contato" },
   ];
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         <a href="#top" className="flex items-center gap-2">
           <img src={logoAsset.url} alt="Rede Pró Vida Belém" className="h-8 md:h-10 w-auto" />

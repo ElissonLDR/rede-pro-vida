@@ -439,30 +439,30 @@ function Combos() {
           {combos.map((c) => (
             <Card
               key={c.t}
-              className={`relative rounded-2xl border-0 transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative rounded-2xl transition-all duration-300 hover:-translate-y-1 bg-white shadow-sm hover:shadow-xl ${
                 c.popular
-                  ? "bg-[var(--petrol)] text-white shadow-2xl shadow-[var(--petrol)]/30 ring-2 ring-[var(--coral)]"
-                  : "bg-white shadow-sm hover:shadow-xl"
+                  ? "border-2 border-[var(--petrol)] ring-1 ring-[var(--coral-soft)]"
+                  : "border border-border"
               }`}
             >
               {c.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--coral)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--petrol)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                   Mais Completo
                 </div>
               )}
               <CardContent className="p-6 flex flex-col h-full">
-                <h3 className={`text-lg font-bold ${c.popular ? "text-white" : "text-[var(--petrol)]"}`}>{c.t}</h3>
+                <h3 className="text-lg font-bold text-[var(--petrol)]">{c.t}</h3>
                 <div className="mt-3">
-                  <div className={`text-xs uppercase tracking-wide ${c.popular ? "text-white/70" : "text-muted-foreground"}`}>a partir de</div>
-                  <div className={`mt-1 text-3xl font-extrabold ${c.popular ? "text-white" : "text-[var(--petrol)]"}`}>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">a partir de</div>
+                  <div className="mt-1 text-3xl font-bold text-foreground">
                     R$ {c.price}
                   </div>
                 </div>
                 <ul className="mt-5 space-y-2.5 flex-1">
                   {c.items.map((i) => (
                     <li key={i} className="flex gap-2.5 text-sm">
-                      <CheckCircle2 className={`h-5 w-5 shrink-0 ${c.popular ? "text-[var(--coral)]" : "text-[var(--whatsapp)]"}`} />
-                      <span className={c.popular ? "text-white/90" : "text-foreground/80"}>{i}</span>
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--whatsapp)]" />
+                      <span className="text-foreground/80">{i}</span>
                     </li>
                   ))}
                 </ul>
@@ -472,18 +472,13 @@ function Combos() {
                   rel="noopener noreferrer"
                   className="mt-6"
                 >
-                  <Button
-                    className={`w-full gap-2 h-12 ${
-                      c.popular
-                        ? "bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white"
-                        : "bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white"
-                    }`}
-                  >
+                  <Button className="w-full gap-2 h-12 rounded-xl bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white">
                     <MessageCircle className="h-4 w-4" /> Quero esse combo
                   </Button>
                 </a>
               </CardContent>
             </Card>
+
           ))}
         </div>
       </div>

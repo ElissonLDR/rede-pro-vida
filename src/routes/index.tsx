@@ -132,73 +132,72 @@ function Header() {
 /* ---------------- Hero ---------------- */
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-[var(--petrol)] text-white">
-      {/* backdrop */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_55%),radial-gradient(circle_at_80%_0%,rgba(255,122,89,0.25),transparent_50%)]" />
-      <div className="absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-[var(--coral)]/20 blur-3xl" />
-      <div className="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
+    <section id="top" className="relative overflow-hidden bg-white">
+      {/* subtle blue accents */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_15%_10%,rgba(27,117,188,0.08),transparent_55%),radial-gradient(circle_at_85%_0%,rgba(74,155,216,0.10),transparent_55%)]" />
+      <div className="absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-[var(--coral-soft)] blur-3xl opacity-70" />
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-6 pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         {/* copy */}
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-3.5 py-1.5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--coral-soft)] bg-[var(--coral-soft)]/60 px-3.5 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--whatsapp)] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--whatsapp)]" />
             </span>
-            <span className="text-xs md:text-sm font-medium text-white/90">
+            <span className="text-xs md:text-sm font-medium text-[var(--petrol)]">
               Agendamento aberto hoje — resposta em minutos
             </span>
           </div>
 
-          <h1 className="mt-6 text-[2.5rem] leading-[1.02] md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight">
-            Sua saúde <span className="text-[var(--coral)]">não pode</span> esperar
+          <h1 className="mt-6 text-[2.5rem] leading-[1.05] md:text-6xl lg:text-[4.25rem] font-semibold tracking-tight text-foreground">
+            Sua saúde <span className="text-[var(--petrol)] font-bold">não pode</span> esperar
             <br className="hidden md:block" /> por uma vaga no SUS.
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
-            Consultas a partir de <strong className="text-white">R$ 80</strong>, exames e cirurgias
-            com preço fechado — <strong className="text-white">+20 especialidades</strong> no mesmo lugar,
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            Consultas a partir de <strong className="text-foreground">R$ 80</strong>, exames e cirurgias
+            com preço fechado — <strong className="text-foreground">+20 especialidades</strong> no mesmo lugar,
             em Belém, com agendamento direto no WhatsApp.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href={waLink()} target="_blank" rel="noopener noreferrer" className="sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 text-base h-14 px-8 shadow-xl shadow-[var(--whatsapp)]/40 font-semibold">
+              <Button size="lg" className="w-full sm:w-auto bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 text-base h-14 px-8 shadow-lg shadow-[var(--whatsapp)]/25 font-semibold rounded-xl">
                 <MessageCircle className="h-5 w-5" /> Agendar agora no WhatsApp
               </Button>
             </a>
             <a href="#combos" className="sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-7 border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white text-base backdrop-blur">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-7 border-[var(--petrol)] bg-white text-[var(--petrol)] hover:bg-[var(--coral-soft)] hover:text-[var(--petrol)] text-base rounded-xl">
                 Ver combos e preços <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             </a>
           </div>
 
           {/* trust row */}
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/70">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[0,1,2,3,4].map((i) => (
-                  <Star key={i} className="h-4 w-4 text-[var(--coral)] fill-[var(--coral)]" />
+                  <Star key={i} className="h-4 w-4 text-[var(--petrol)] fill-[var(--petrol)]" />
                 ))}
               </div>
-              <span><strong className="text-white">4.9</strong> no Google</span>
+              <span><strong className="text-foreground">4.9</strong> no Google</span>
             </div>
             <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[var(--whatsapp)]" /> Preço fechado, sem surpresa</div>
             <div className="flex items-center gap-2"><Clock className="h-4 w-4 text-[var(--whatsapp)]" /> Vagas para esta semana</div>
           </div>
 
           {/* stats */}
-          <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl border-t border-white/10 pt-8">
+          <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl border-t border-border pt-8">
             {[
               { n: "+10", l: "Anos em Belém" },
               { n: "+20", l: "Especialidades" },
               { n: "+50k", l: "Pacientes atendidos" },
             ].map((s) => (
               <div key={s.l}>
-                <div className="text-3xl md:text-4xl font-extrabold text-white">{s.n}</div>
-                <div className="text-xs md:text-sm text-white/60 mt-1">{s.l}</div>
+                <div className="text-3xl md:text-4xl font-bold text-[var(--petrol)]">{s.n}</div>
+                <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
               </div>
             ))}
           </div>
@@ -206,43 +205,43 @@ function Hero() {
 
         {/* image column */}
         <div className="lg:col-span-5 relative">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--coral)]/30 to-transparent blur-2xl" />
-          <div className="relative rounded-[2rem] overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40">
+          <div className="absolute -inset-4 rounded-[2rem] bg-[var(--coral-soft)] blur-2xl opacity-60" />
+          <div className="relative rounded-[2rem] overflow-hidden ring-1 ring-border shadow-xl shadow-[var(--petrol)]/10">
             <img src={heroDoctor} alt="Médica em atendimento humanizado na Rede Pró Vida Belém" width={1280} height={1280} className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--petrol)]/60 via-transparent to-transparent" />
           </div>
 
           {/* floating price card */}
-          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-white text-[var(--petrol)] rounded-2xl shadow-2xl p-4 pr-5 flex items-center gap-3 ring-1 ring-black/5 max-w-[16rem]">
+          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-white text-foreground rounded-2xl shadow-xl p-4 pr-5 flex items-center gap-3 ring-1 ring-border max-w-[16rem]">
             <div className="h-11 w-11 rounded-xl bg-[var(--whatsapp)]/10 grid place-items-center shrink-0">
               <Wallet className="h-5 w-5 text-[var(--whatsapp)]" />
             </div>
             <div>
               <div className="text-[0.7rem] uppercase tracking-wide text-muted-foreground font-semibold">Consulta a partir de</div>
-              <div className="text-xl font-extrabold leading-tight">R$ 80,00</div>
+              <div className="text-xl font-bold leading-tight text-[var(--petrol)]">R$ 80,00</div>
             </div>
           </div>
 
           {/* floating rating */}
-          <div className="hidden md:flex absolute -top-4 -right-4 bg-white text-[var(--petrol)] rounded-2xl shadow-xl px-4 py-3 items-center gap-2 ring-1 ring-black/5">
-            <Star className="h-4 w-4 text-[var(--coral)] fill-[var(--coral)]" />
-            <span className="text-sm font-semibold">4.9 no Google</span>
+          <div className="hidden md:flex absolute -top-4 -right-4 bg-white text-foreground rounded-2xl shadow-lg px-4 py-3 items-center gap-2 ring-1 ring-border">
+            <Star className="h-4 w-4 text-[var(--petrol)] fill-[var(--petrol)]" />
+            <span className="text-sm font-semibold text-[var(--petrol)]">4.9 no Google</span>
           </div>
         </div>
       </div>
 
-      {/* bottom marquee-ish trust bar */}
-      <div className="relative border-t border-white/10 bg-black/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-4 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-2 text-xs md:text-sm text-white/70">
-          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--coral)]" /> 3 unidades em Belém</div>
-          <div className="flex items-center gap-2"><Stethoscope className="h-4 w-4 text-[var(--coral)]" /> Clínico, Cardio, Pediatria, Ginecologia…</div>
-          <div className="flex items-center gap-2"><FlaskConical className="h-4 w-4 text-[var(--coral)]" /> Exames laboratoriais e de imagem</div>
-          <div className="flex items-center gap-2"><Scissors className="h-4 w-4 text-[var(--coral)]" /> Cirurgias com pacote fechado</div>
+      {/* bottom trust bar */}
+      <div className="relative border-t border-border bg-[var(--soft)]">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-4 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-2 text-xs md:text-sm text-muted-foreground">
+          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[var(--petrol)]" /> 3 unidades em Belém</div>
+          <div className="flex items-center gap-2"><Stethoscope className="h-4 w-4 text-[var(--petrol)]" /> Clínico, Cardio, Pediatria, Ginecologia…</div>
+          <div className="flex items-center gap-2"><FlaskConical className="h-4 w-4 text-[var(--petrol)]" /> Exames laboratoriais e de imagem</div>
+          <div className="flex items-center gap-2"><Scissors className="h-4 w-4 text-[var(--petrol)]" /> Cirurgias com pacote fechado</div>
         </div>
       </div>
     </section>
   );
 }
+
 
 /* ---------------- Pains ---------------- */
 function Pains() {

@@ -539,15 +539,16 @@ function Numbers() {
     { n: "4.9★", l: "Nota no Google" },
   ];
   return (
-    <section className="bg-gradient-to-br from-[var(--petrol)] via-[var(--petrol-dark)] to-[var(--petrol)] text-white py-16 md:py-20">
+    <section className="bg-white border-y border-border py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
-            <div className="text-4xl md:text-6xl font-extrabold text-white">{s.n}</div>
-            <div className="mt-2 text-sm md:text-base text-white/70">{s.l}</div>
+            <div className="text-4xl md:text-6xl font-bold text-[var(--petrol)]">{s.n}</div>
+            <div className="mt-2 text-sm md:text-base text-muted-foreground">{s.l}</div>
           </div>
         ))}
       </div>
+
     </section>
   );
 }

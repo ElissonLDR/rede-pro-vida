@@ -252,27 +252,27 @@ function Pains() {
     "Sem saber o valor final até chegar no balcão da clínica?",
   ];
   return (
-    <section className="bg-[var(--petrol)] text-white py-20 md:py-28">
+    <section className="bg-[var(--soft)] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <Badge className="bg-white/10 hover:bg-white/10 text-white border-0 mb-5">Talvez você se identifique</Badge>
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <Badge className="bg-[var(--coral-soft)] hover:bg-[var(--coral-soft)] text-[var(--petrol)] border-0 mb-5">Talvez você se identifique</Badge>
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight text-foreground">
             Sua saúde (e a da sua família) está passando por isso?
           </h2>
         </div>
         <div className="mt-14 grid sm:grid-cols-2 gap-5">
           {items.map((it) => (
-            <div key={it} className="group flex gap-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10 p-6">
-              <div className="shrink-0 h-11 w-11 rounded-xl bg-[var(--coral)]/20 grid place-items-center">
-                <AlertCircle className="h-5 w-5 text-[var(--coral)]" />
+            <div key={it} className="group flex gap-4 rounded-2xl bg-white hover:shadow-md transition-shadow border border-border p-6 shadow-sm">
+              <div className="shrink-0 h-11 w-11 rounded-xl bg-[var(--coral-soft)] grid place-items-center">
+                <AlertCircle className="h-5 w-5 text-[var(--petrol)]" />
               </div>
-              <p className="text-lg text-white/90 leading-snug pt-1">{it}</p>
+              <p className="text-lg text-foreground leading-snug pt-1">{it}</p>
             </div>
           ))}
         </div>
         <div className="mt-12 text-center">
           <a href={waLink()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7">
+            <Button size="lg" className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 h-14 px-7 rounded-xl">
               <MessageCircle className="h-5 w-5" /> Resolver agora no WhatsApp
             </Button>
           </a>
@@ -281,6 +281,7 @@ function Pains() {
     </section>
   );
 }
+
 
 /* ---------------- How it works ---------------- */
 function HowItWorks() {

@@ -156,7 +156,7 @@ function Hero() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Consultas a partir de <strong className="text-foreground">R$ 80</strong>, exames e cirurgias
+            Consultas a partir de <strong className="text-foreground">R$ 59,90</strong>, exames e cirurgias
             com preço fechado — <strong className="text-foreground">+20 especialidades</strong> no mesmo lugar,
             em Belém, com agendamento direto no WhatsApp.
           </p>
@@ -217,7 +217,7 @@ function Hero() {
             </div>
             <div>
               <div className="text-[0.7rem] uppercase tracking-wide text-muted-foreground font-semibold">Consulta a partir de</div>
-              <div className="text-xl font-bold leading-tight text-[var(--petrol)]">R$ 80,00</div>
+              <div className="text-xl font-bold leading-tight text-[var(--petrol)]">R$ 59,90</div>
             </div>
           </div>
 
@@ -362,9 +362,9 @@ function Differentials() {
 function Services() {
   const services = [
     { i: Stethoscope, t: "Consultas Médicas", d: "Mais de 20 especialidades com agendamento rápido.", msg: "Olá! Gostaria de agendar uma consulta médica." },
-    { i: FlaskConical, t: "Exames", d: "Diagnósticos ágeis com equipamentos modernos.", msg: "Olá! Gostaria de agendar um exame." },
-    { i: Scissors, t: "Cirurgias Acessíveis", d: "Procedimentos com equipe experiente e preço justo.", msg: "Olá! Gostaria de saber sobre cirurgias." },
-    { i: Smile, t: "Odontologia", d: "Tratamentos completos, do preventivo ao avançado.", msg: "Olá! Gostaria de agendar um atendimento odontológico." },
+    { i: FlaskConical, t: "Exames Laboratoriais", d: "Diagnósticos ágeis com equipamentos modernos.", msg: "Olá! Gostaria de agendar um exame." },
+    { i: Scissors, t: "Procedimentos Estéticos", d: "Procedimentos com equipe experiente e preço justo.", msg: "Olá! Gostaria de saber sobre cirurgias." },
+    { i: Smile, t: "Exames de Imagem e Cardiológicos", d: "Tratamentos completos, do preventivo ao avançado.", msg: "Olá! Gostaria de agendar um atendimento odontológico." },
     { i: Briefcase, t: "Medicina do Trabalho", d: "Exames e laudos dentro do prazo exigido por lei.", msg: "Olá! Gostaria de saber sobre medicina do trabalho." },
     { i: Package, t: "Combos Promocionais", d: "Consulta e exames juntos, com mais economia.", msg: "Olá! Gostaria de saber sobre os combos promocionais." },
   ];
@@ -407,23 +407,23 @@ function Combos() {
   const combos = [
     {
       t: "Combo Saúde da Mulher",
-      price: "199,00",
+      price: "169,90",
       items: ["Consulta ginecológica", "Exames laboratoriais de rotina", "Papanicolau"],
       popular: true,
     },
     {
       t: "Combo Check-up Pediátrico",
-      price: "179,00",
+      price: "169,90",
       items: ["Consulta pediátrica", "Exames laboratoriais essenciais"],
     },
     {
       t: "Combo Pré-Cirúrgico",
-      price: "249,00",
+      price: "269,90",
       items: ["Avaliação médica completa", "Risco cirúrgico", "Exames básicos"],
     },
     {
       t: "Combo Hipertensão e Diabetes",
-      price: "189,00",
+      price: "259,90",
       items: ["Consulta médica", "Exames de acompanhamento e controle"],
     },
   ];
@@ -557,7 +557,6 @@ function Numbers() {
 /* ---------------- FAQ ---------------- */
 function FAQSection() {
   const faqs = [
-    { q: "Preciso ter plano de saúde para ser atendido?", a: "Não! Atendemos de forma particular com preços acessíveis e condições facilitadas para quem não tem plano de saúde." },
     { q: "Quanto custa uma consulta particular?", a: "Oferecemos valores super acessíveis que cabem no seu bolso. Entre em contato pelo WhatsApp para conferir os valores atualizados por especialidade." },
     { q: "Vocês atendem crianças?", a: "Sim, contamos com pediatras experientes e estrutura acolhedora para atendimento infantil." },
     { q: "Consigo fazer consulta, exame e cirurgia no mesmo lugar?", a: "Sim! Nossa proposta é resolver toda a sua jornada de saúde em um só lugar, com agilidade e integração." },

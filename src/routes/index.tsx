@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import logoAsset from "@/assets/logo-provida.svg.asset.json";
-import heroDoctor from "@/assets/hero-doctor.jpg";
+import heroSection1 from "@/assets/hero-section1.jpg.asset.json";
 
 const WA_NUMBER = "559193022218";
 const WA_MSG = encodeURIComponent(
@@ -151,8 +151,9 @@ function Hero() {
           </div>
 
           <h1 className="mt-6 text-[2.5rem] leading-[1.05] md:text-6xl lg:text-[4.25rem] font-semibold tracking-tight text-foreground">
-            Sua saúde <span className="text-[var(--petrol)] font-bold">não pode</span> esperar
-            <br className="hidden md:block" /> por uma vaga no SUS.
+            Sua saúde <span className="text-[var(--petrol)] font-bold">não pode</span>
+            <br className="hidden md:block" /> esperar por uma
+            <br className="hidden md:block" /> vaga no SUS.
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -207,7 +208,7 @@ function Hero() {
         <div className="lg:col-span-5 relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-[var(--coral-soft)] blur-2xl opacity-60" />
           <div className="relative rounded-[2rem] overflow-hidden ring-1 ring-border shadow-xl shadow-[var(--petrol)]/10">
-            <img src={heroDoctor} alt="Médica em atendimento humanizado na Rede Pró Vida Belém" width={1280} height={1280} className="w-full h-auto object-cover" />
+            <img src={heroSection1.url} alt="Médica em atendimento humanizado na Rede Pró Vida Belém" width={576} height={768} className="w-full h-auto object-cover" />
           </div>
 
           {/* floating price card */}

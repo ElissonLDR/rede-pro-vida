@@ -59,8 +59,8 @@ const sections: { title: string; paragraphs: string[]; list?: string[] }[] = [
       "Medir o desempenho de campanhas de anúncios (cliques, impressões e conversões, como envios de formulário e contatos via WhatsApp);",
       "Otimizar campanhas publicitárias e mensurar o retorno dos investimentos em mídia;",
       "Gerar relatórios agregados e anônimos de uso do site.",
+      "Você pode saber mais sobre como o Google utiliza os dados dessas ferramentas em https://policies.google.com/technologies/partner-sites.",
     ],
-    // extra paragraph appended below via paragraphs[1]
   },
   {
     title: "5. Compartilhamento de dados",

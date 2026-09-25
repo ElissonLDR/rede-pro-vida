@@ -694,7 +694,7 @@ function Footer() {
             <li><a href="#faq" className="hover:text-[var(--petrol)]">Perguntas frequentes</a></li>
             <li><a href="#depoimentos" className="hover:text-[var(--petrol)]">Depoimentos</a></li>
             <li><a href="#" className="hover:text-[var(--petrol)]">Termos de Uso</a></li>
-            <li><a href="#" className="hover:text-[var(--petrol)]">Política de Privacidade</a></li>
+            <li><Link to="/privacidade" className="hover:text-[var(--petrol)]">Política de Privacidade</Link></li>
           </ul>
           <a href={waLink()} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block">
             <Button className="bg-[var(--whatsapp)] hover:bg-[var(--whatsapp-hover)] text-white gap-2 rounded-xl">

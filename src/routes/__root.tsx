@@ -11,6 +11,14 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { initGTM } from "../lib/gtm";
+
+function GtmLoader() {
+  useEffect(() => {
+    void initGTM();
+  }, []);
+  return null;
+}
 
 function NotFoundComponent() {
   return (
@@ -129,6 +137,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <GtmLoader />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
